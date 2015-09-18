@@ -4,6 +4,5 @@ import com.vaadin.shared.communication.ServerRpc;
 
 public interface PaperSliderServerRpc extends ServerRpc {
 
-	public void valueChanged(int newValue);
-
+	public void valueChanged(int value);
 }

@@ -29,10 +29,9 @@ public class ExtendingUI extends UI {
 		layout.setMargin(true);
 
 		// layout.addComponent(new ServerSideSearch());
-//		layout.addComponent(new ServerSideSearchOptimized());
+		// layout.addComponent(new ServerSideSearchOptimized());
 		layout.addComponent(new PaperSliderView());
 		setContent(layout);
-		
 
 	}
 }

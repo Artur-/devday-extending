@@ -8,6 +8,12 @@ import com.vaadin.ui.AbstractField;
 public class PaperSlider extends AbstractField<Integer> {
 
 	public PaperSlider() {
+		registerRpc(new PaperSliderServerRpc() {
+			@Override
+			public void valueChanged(int value) {
+				setValue(value);
+			}
+		});
 	}
 
 	@Override
@@ -34,4 +40,11 @@ public class PaperSlider extends AbstractField<Integer> {
 		getState().value = newValue;
 	}
 
+	public void setPin(boolean pin) {
+		getState().pin = pin;
+	}
+
+	public void setStep(int step) {
+		getState().step = step;
+	}
 }
