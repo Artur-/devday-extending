@@ -2,8 +2,9 @@ package org.vaadin.artur;
 
 import javax.servlet.annotation.WebServlet;
 
-import org.vaadin.artur.serversidesearchoptimized.ServerSideSearchOptimized;
+import org.vaadin.artur.paperslider.PaperSliderView;
 
+import com.vaadin.annotations.JavaScript;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.annotations.Widgetset;
@@ -14,6 +15,7 @@ import com.vaadin.ui.VerticalLayout;
 
 @Theme("mytheme")
 @Widgetset("org.vaadin.artur.MyAppWidgetset")
+@JavaScript("https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.12/webcomponents-lite.min.js")
 public class ExtendingUI extends UI {
 
 	@WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)
@@ -27,8 +29,10 @@ public class ExtendingUI extends UI {
 		layout.setMargin(true);
 
 		// layout.addComponent(new ServerSideSearch());
-		layout.addComponent(new ServerSideSearchOptimized());
+//		layout.addComponent(new ServerSideSearchOptimized());
+		layout.addComponent(new PaperSliderView());
 		setContent(layout);
+		
 
 	}
 }
