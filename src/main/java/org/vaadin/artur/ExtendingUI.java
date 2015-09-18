@@ -2,7 +2,7 @@ package org.vaadin.artur;
 
 import javax.servlet.annotation.WebServlet;
 
-import org.vaadin.artur.paperslider.PaperSliderView;
+import org.vaadin.artur.gridrenderer.GridView;
 
 import com.vaadin.annotations.JavaScript;
 import com.vaadin.annotations.Theme;
@@ -30,7 +30,8 @@ public class ExtendingUI extends UI {
 
 		// layout.addComponent(new ServerSideSearch());
 		// layout.addComponent(new ServerSideSearchOptimized());
-		layout.addComponent(new PaperSliderView());
+		// layout.addComponent(new PaperSliderView());
+		layout.addComponent(new GridView());
 		setContent(layout);
 
 	}
