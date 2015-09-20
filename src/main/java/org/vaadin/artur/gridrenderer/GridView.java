@@ -2,13 +2,15 @@ package org.vaadin.artur.gridrenderer;
 
 import com.vaadin.data.Container.Indexed;
 import com.vaadin.data.Item;
+import com.vaadin.navigator.View;
+import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.server.FontAwesome;
 import com.vaadin.ui.Grid;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 
-public class GridView extends VerticalLayout {
+public class GridView extends VerticalLayout implements View {
 
 	public GridView() {
 
@@ -43,5 +45,9 @@ public class GridView extends VerticalLayout {
 
 		Notification.show(e.getButtonText() + " " + clickedName);
 		
+	}
+
+	@Override
+	public void enter(ViewChangeEvent event) {
 	}
 }
